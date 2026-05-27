@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cinomon. | Artisanal Cinnamon Perfumery</title>
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Discover cinomon., a premium luxury fragrance house creating artisanal, cinnamon-infused perfumes. Explore our signature collection, find your scent with our interactive quiz, or personalize your bottle with custom engraving.">
+  <meta name="keywords" content="luxury perfume, cinomon, cinnamon fragrance, artisanal perfumery, signature scent, custom perfume engraving">
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- SVG Gradients definitions for Circle Progress and Icons -->
+  <svg style="width:0; height:0; position:absolute;" aria-hidden="true">
+    <defs>
+      <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="hsl(43, 60%, 70%)" />
+        <stop offset="50%" stop-color="hsl(38, 75%, 55%)" />
+        <stop offset="100%" stop-color="hsl(24, 50%, 55%)" />
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <!-- Transparent/Scrolled Header Navigation -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="logo-container">
+        <a href="#" class="logo">
+          cinomon<span class="logo-dot"></span>
+        </a>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#catalog" class="nav-link">Collection</a></li>
+          <li><a href="#quiz" class="nav-link">Scent Finder</a></li>
+          <li><a href="#engraving" class="nav-link">Custom Engraving</a></li>
+          <li><a href="#heritage" class="nav-link">Our Heritage</a></li>
+          <li><a href="#reviews" class="nav-link">Reviews</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <!-- Interactive Cart Trigger Button -->
+        <button class="btn-icon cart-trigger" id="cart-trigger-btn" aria-label="Open shopping cart">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-count" id="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Immersive Hero Section -->
+    <section class="hero" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content slide-in-left active">
+          <span class="hero-tagline">The Art of Spiced Allure</span>
+          <h1 class="hero-title">
+            cinnamon, 
+            <span class="gold-gradient-text">refined.</span>
+          </h1>
+          <p class="hero-description">
+            A premium fragrance house reimagining the warm, sophisticated depth of natural Ceylon cinnamon. Crafted in small batches, designed to leave an unforgettable impression.
+          </p>
+          <div class="hero-buttons">
+            <a href="#catalog" class="btn btn-primary">Explore Collection</a>
+            <a href="#quiz" class="btn btn-secondary">Find Your Scent</a>
+          </div>
+        </div>
+        <div class="hero-visual slide-in-right active">
+          <div class="hero-circle-bg"></div>
+          <div class="hero-bottle-wrap">
+            <img src="assets/hero_perfume.png" alt="Cinomon Signature Luxury Perfume Bottle" class="hero-bottle-img">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Signature Collection (Product Catalog) -->
+    <section class="catalog" id="catalog">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-subtitle">Flagship Offerings</span>
+          <h2 class="section-title">The Cinomon Collection</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="catalog-grid">
+          <!-- Product 1: Spiced Oud -->
+          <article class="product-card glass-panel fade-in" id="card-spiced-oud">
+            <div class="product-image-container">
+              <div class="product-image-decor"></div>
+              <img src="assets/perfume_no1.png" alt="Cinomon No.1 Spiced Oud Perfume" class="product-img">
+            </div>
+            <div class="product-details">
+              <div>
+                <div class="product-info-top">
+                  <div class="product-title-wrap">
+                    <h3>No. 1 Spiced Oud</h3>
+                    <span class="product-subtitle">Woody & Warm Spice</span>
+                  </div>
+                  <span class="product-price">$145</span>
+                </div>
+                <p class="product-description">
+                  An enigmatic, deep blend of rare organic oud wood and warm Ceylon cinnamon bark, grounded by rich leather and cardamon.
+                </p>
+
+                <!-- Ingredient Tabs -->
+                <div class="product-tabs">
+                  <ul class="tab-nav">
+                    <li><button class="tab-btn active" data-tab="top-1">Top</button></li>
+                    <li><button class="tab-btn" data-tab="heart-1">Heart</button></li>
+                    <li><button class="tab-btn" data-tab="base-1">Base</button></li>
+                  </ul>
+                  <div class="tab-pane active" id="top-1">
+                    <p>Ceylon Cinnamon, Wild Cardamom, Szechuan Pepper</p>
+                    <div class="note-tags">
+                      <span class="note-tag">Spicy</span>
+                      <span class="note-tag">Warm</span>
+                    </div>
+                  </div>
+                  <div class="tab-pane" id="heart-1">
+                    <p>Black Leather, Smoked Saffron, Turkish Rose</p>
+                    <div class="note-tags">
+                      <span class="note-tag">Leather</span>
+                      <span class="note-tag">Floral</span>
+                    </div>
+                  </div>
+                  <div class="tab-pane" id="base-1">
+                    <p>Assam Oud Wood, Rich Amber, Sandalwood</p>
+                    <div class="note-tags">
+                      <span class="note-tag">Woody</span>
+                      <span class="note-tag">Earthy</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Scent Profile Meters -->
+                <div class="product-meters">
+                  <div class="meter-row">
+                    <div class="meter-label"><span>Longevity</span><span>Very Long Lasting</span></div>
+                    <div class="meter-bg"><div class="meter-bar" style="width: 90%;"></div></div>
+                  </div>
+                  <div class="meter-row">
+                    <div class="meter-label"><span>Sillage</span><span>Strong Trail</span></div>
+                    <div class="meter-bg"><div class="meter-bar" style="width: 85%;"></div></div>
+                  </div>
+                </div>
+              </div>
+
+              <button class="btn btn-primary product-action-btn" data-product-id="spiced-oud" data-product-name="No. 1 Spiced Oud" data-product-price="145" data-product-img="assets/perfume_no1.png">
+                Add to Collection
+              </button>
+            </div>
+          </article>
+
+          <!-- Product 2: Vanilla Bark -->
+          <article class="product-card glass-panel fade-in" id="card-vanilla-bark">
+            <div class="product-image-container">
+              <div class="product-image-decor"></div>
+              <img src="assets/perfume_blanc.png" alt="Cinomon Blanc Vanilla Bark Perfume" class="product-img">
+            </div>
+            <div class="product-details">
+              <div>
+                <div class="product-info-top">
+                  <div class="product-title-wrap">
+                    <h3>Blanc Vanilla Bark</h3>
+                    <span class="product-subtitle">Sweet Cream & Soft Wood</span>
+                  </div>
+                  <span class="product-price">$135</span>
+                </div>
+                <p class="product-description">
+                  A sophisticated, creamy indulgence merging bourbon vanilla pods and sweet cinnamon dust, balanced by soft white musk.
+                </p>
+
+                <!-- Ingredient Tabs -->
+                <div class="product-tabs">
+                  <ul class="tab-nav">
+                    <li><button class="tab-btn active" data-tab="top-2">Top</button></li>
+                    <li><button class="tab-btn" data-tab="heart-2">Heart</button></li>
+                    <li><button class="tab-btn" data-tab="base-2">Base</button></li>
+                  </ul>
+                  <div class="tab-pane active" id="top-2">
+                    <p>Sweet Cinnamon, Candied Orange, White Pepper</p>
+                    <div class="note-tags">
+                      <span class="note-tag">Sweet</span>
+                      <span class="note-tag">Citrus</span>
+                    </div>
+                  </div>
+                  <div class="tab-pane" id="heart-2">
+                    <p>Madagascan Vanilla Bean, Creamy Heliotrope, Warm Milk</p>
+                    <div class="note-tags">
+                      <span class="note-tag">Gourmand</span>
+                      <span class="note-tag">Creamy</span>
+                    </div>
+                  </div>
+                  <div class="tab-pane" id="base-2">
+                    <p>Cashmere Wood, White Musk, Salted Caramel</p>
+                    <div class="note-tags">
+                      <span class="note-tag">Woody</span>
+                      <span class="note-tag">Musky</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Scent Profile Meters -->
+                <div class="product-meters">
+                  <div class="meter-row">
+                    <div class="meter-label"><span>Longevity</span><span>Moderate</span></div>
+                    <div class="meter-bg"><div class="meter-bar" style="width: 70%;"></div></div>
+                  </div>
+                  <div class="meter-row">
+                    <div class="meter-label"><span>Sillage</span><span>Intimate & Cozy</span></div>
+                    <div class="meter-bg"><div class="meter-bar" style="width: 60%;"></div></div>
+                  </div>
+                </div>
+              </div>
+
+              <button class="btn btn-primary product-action-btn" data-product-id="vanilla-bark" data-product-name="Blanc Vanilla Bark" data-product-price="135" data-product-img="assets/perfume_blanc.png">
+                Add to Collection
+              </button>
+            </div>
+          </article>
+
+          <!-- Product 3: Crimson Bark -->
+          <article class="product-card glass-panel fade-in" id="card-crimson-bark">
+            <div class="product-image-container">
+              <div class="product-image-decor"></div>
+              <img src="assets/perfume_rose.png" alt="Cinomon Rose Crimson Bark Perfume" class="product-img">
+            </div>
+            <div class="product-details">
+              <div>
+                <div class="product-info-top">
+                  <div class="product-title-wrap">
+                    <h3>Rose Crimson Bark</h3>
+                    <span class="product-subtitle">Spicy Floral & Romantic</span>
+                  </div>
+                  <span class="product-price">$150</span>
+                </div>
+                <p class="product-description">
+                  A passionate, velvety signature highlighting turkish Damascus rose petals paired with bold red cinnamon and pink peppercorns.
+                </p>
+
+                <!-- Ingredient Tabs -->
+                <div class="product-tabs">
+                  <ul class="tab-nav">
+                    <li><button class="tab-btn active" data-tab="top-3">Top</button></li>
+                    <li><button class="tab-btn" data-tab="heart-3">Heart</button></li>
+                    <li><button class="tab-btn" data-tab="base-3">Base</button></li>
+                  </ul>
+                  <div class="tab-pane active" id="top-3">
+                    <p>Pink Peppercorn, Red Cinnamon Shavings, Raspberry</p>
+                    <div class="note-tags">
+                      <span class="note-tag">Spicy</span>
+                      <span class="note-tag">Fruity</span>
+                    </div>
+                  </div>
+                  <div class="tab-pane" id="heart-3">
+                    <p>Damascus Rose, Peony petals, Dry Bark essence</p>
+                    <div class="note-tags">
+                      <span class="note-tag">Floral</span>
+                      <span class="note-tag">Velvety</span>
+                    </div>
+                  </div>
+                  <div class="tab-pane" id="base-3">
+                    <p>Dark Amber, Indonesian Patchouli, Toasted Cinnamon Wood</p>
+                    <div class="note-tags">
+                      <span class="note-tag">Earthy</span>
+                      <span class="note-tag">Resinous</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Scent Profile Meters -->
+                <div class="product-meters">
+                  <div class="meter-row">
+                    <div class="meter-label"><span>Longevity</span><span>Long Lasting</span></div>
+                    <div class="meter-bg"><div class="meter-bar" style="width: 80%;"></div></div>
+                  </div>
+                  <div class="meter-row">
+                    <div class="meter-label"><span>Sillage</span><span>Moderate & Elegant</span></div>
+                    <div class="meter-bg"><div class="meter-bar" style="width: 75%;"></div></div>
+                  </div>
+                </div>
+              </div>
+
+              <button class="btn btn-primary product-action-btn" data-product-id="crimson-bark" data-product-name="Rose Crimson Bark" data-product-price="150" data-product-img="assets/perfume_rose.png">
+                Add to Collection
+              </button>
+            </div>
+          </article>
+
+          <!-- Product 4: Smoked Amber -->
+          <article class="product-card glass-panel fade-in" id="card-smoked-amber">
+            <div class="product-image-container">
+              <div class="product-image-decor"></div>
+              <img src="assets/perfume_noir.png" alt="Cinomon Noir Smoked Amber Perfume" class="product-img">
+            </div>
+            <div class="product-details">
+              <div>
+                <div class="product-info-top">
+                  <div class="product-title-wrap">
+                    <h3>Noir Smoked Amber</h3>
+                    <span class="product-subtitle">Smoky wood & Deep Resin</span>
+                  </div>
+                  <span class="product-price">$160</span>
+                </div>
+                <p class="product-description">
+                  An intense, mysterious nocturnal extract of dark smoldering amber, toasted cinnamon sticks, and smoked Texas cedar.
+                </p>
+
+                <!-- Ingredient Tabs -->
+                <div class="product-tabs">
+                  <ul class="tab-nav">
+                    <li><button class="tab-btn active" data-tab="top-4">Top</button></li>
+                    <li><button class="tab-btn" data-tab="heart-4">Heart</button></li>
+                    <li><button class="tab-btn" data-tab="base-4">Base</button></li>
+                  </ul>
+                  <div class="tab-pane active" id="top-4">
+                    <p>Smoked Cedar Bark, Clove buds, Toasted Cinnamon</p>
+                    <div class="note-tags">
+                      <span class="note-tag">Smoky</span>
+                      <span class="note-tag">Spicy</span>
+                    </div>
+                  </div>
+                  <div class="tab-pane" id="heart-4">
+                    <p>Molten Honey Amber, Labdanum resin, Myrrh</p>
+                    <div class="note-tags">
+                      <span class="note-tag">Resinous</span>
+                      <span class="note-tag">Warm</span>
+                    </div>
+                  </div>
+                  <div class="tab-pane" id="base-4">
+                    <p>Smoked Vetiver, Vanilla absolute, Oakmoss</p>
+                    <div class="note-tags">
+                      <span class="note-tag">Earthy</span>
+                      <span class="note-tag">Woody</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Scent Profile Meters -->
+                <div class="product-meters">
+                  <div class="meter-row">
+                    <div class="meter-label"><span>Longevity</span><span>Eternal</span></div>
+                    <div class="meter-bg"><div class="meter-bar" style="width: 95%;"></div></div>
+                  </div>
+                  <div class="meter-row">
+                    <div class="meter-label"><span>Sillage</span><span>Strong & Mysterious</span></div>
+                    <div class="meter-bg"><div class="meter-bar" style="width: 90%;"></div></div>
+                  </div>
+                </div>
+              </div>
+
+              <button class="btn btn-primary product-action-btn" data-product-id="smoked-amber" data-product-name="Noir Smoked Amber" data-product-price="160" data-product-img="assets/perfume_noir.png">
+                Add to Collection
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scent Finder Quiz Section -->
+    <section class="quiz-section" id="quiz">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-subtitle">Discovery</span>
+          <h2 class="section-title">The Scent Finder</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="quiz-container glass-panel fade-in" id="quiz-wrapper">
+          <!-- Quiz Top Progress Line -->
+          <div class="quiz-progress-bar" id="quiz-progress"></div>
+
+          <!-- STEP 1: Mood -->
+          <div class="quiz-step active" data-step="1">
+            <span class="quiz-question-num">Question 1 of 4</span>
+            <h3 class="quiz-question-text">How would you describe your ideal presence in a room?</h3>
+            <div class="quiz-options">
+              <div class="quiz-option">
+                <input type="radio" name="quiz-q1" id="q1-o1" value="spiced-oud" checked>
+                <label for="q1-o1" class="quiz-option-label">
+                  <span class="quiz-option-title">Bold & Enigmatic</span>
+                  <span class="quiz-option-desc">Commanding presence, complex woodiness.</span>
+                </label>
+              </div>
+              <div class="quiz-option">
+                <input type="radio" name="quiz-q1" id="q1-o2" value="vanilla-bark">
+                <label for="q1-o2" class="quiz-option-label">
+                  <span class="quiz-option-title">Warm & Comforting</span>
+                  <span class="quiz-option-desc">Gentle creaminess, invitingly sweet.</span>
+                </label>
+              </div>
+              <div class="quiz-option">
+                <input type="radio" name="quiz-q1" id="q1-o3" value="crimson-bark">
+                <label for="q1-o3" class="quiz-option-label">
+                  <span class="quiz-option-title">Romantic & Sensual</span>
+                  <span class="quiz-option-desc">Elegant florals with a fiery spark.</span>
+                </label>
+              </div>
+              <div class="quiz-option">
+                <input type="radio" name="quiz-q1" id="q1-o4" value="smoked-amber">
+                <label for="q1-o4" class="quiz-option-label">
+                  <span class="quiz-option-title">Intense & Mysterious</span>
+                  <span class="quiz-option-desc">Dark cedar smoke, resinous depths.</span>
+                </label>
+              </div>
+            </div>
+            <div class="quiz-actions">
+              <div></div> <!-- empty placeholder to push next button right -->
+              <button class="btn btn-primary quiz-btn-next" onclick="nextQuizStep()">Next Step</button>
+            </div>
+          </div>
+
+          <!-- STEP 2: Environment -->
+          <div class="quiz-step" data-step="2">
+            <span class="quiz-question-num">Question 2 of 4</span>
+            <h3 class="quiz-question-text">What setting resonates most deeply with your spirit?</h3>
+            <div class="quiz-options">
+              <div class="quiz-option">
+                <input type="radio" name="quiz-q2" id="q2-o1" value="vanilla-bark" checked>
+                <label for="q2-o1" class="quiz-option-label">
+                  <span class="quiz-option-title">A Cozy Fireside Chalet</span>
+                  <span class="quiz-option-desc">Soft cashmere, warm blankets, sweet drinks.</span>
+                </label>
+              </div>
+              <div class="quiz-option">
+                <input type="radio" name="quiz-q2" id="q2-o2" value="spiced-oud">
+                <label for="q2-o2" class="quiz-option-label">
+                  <span class="quiz-option-title">Deep Autumn Woodlands</span>
+                  <span class="quiz-option-desc">Damp soil, rich bark, spicy evergreen breeze.</span>
+                </label>
+              </div>
+              <div class="quiz-option">
+                <input type="radio" name="quiz-q2" id="q2-o3" value="crimson-bark">
+                <label for="q2-o3" class="quiz-option-label">
+                  <span class="quiz-option-title">Golden Hour Rose Garden</span>
+                  <span class="quiz-option-desc">Warm summer sunset, heavy petals, peppery air.</span>
+                </label>
+              </div>
+              <div class="quiz-option">
+                <input type="radio" name="quiz-q2" id="q2-o4" value="smoked-amber">
+                <label for="q2-o4" class="quiz-option-label">
+                  <span class="quiz-option-title">A Candlelit Midnight Library</span>
+                  <span class="quiz-option-desc">Aged leather, dense wood, burning resin smoke.</span>
+                </label>
+              </div>
+            </div>
+            <div class="quiz-actions">
+              <button class="quiz-btn-prev" onclick="prevQuizStep()">Back</button>
+              <button class="btn btn-primary quiz-btn-next" onclick="nextQuizStep()">Next Step</button>
+            </div>
+          </div>
+
+          <!-- STEP 3: Intensity -->
+          <div class="quiz-step" data-step="3">
+            <span class="quiz-question-num">Question 3 of 4</span>
+            <h3 class="quiz-question-text">How do you prefer your fragrance trail (Sillage) to behave?</h3>
+            <div class="quiz-options">
+              <div class="quiz-option">
+                <input type="radio" name="quiz-q3" id="q3-o1" value="vanilla-bark" checked>
+                <label for="q3-o1" class="quiz-option-label">
+                  <span class="quiz-option-title">Intimate skin scent</span>
+                  <span class="quiz-option-desc">Felt only by those permitted to draw close.</span>
+                </label>
+              </div>
+              <div class="quiz-option">
+                <input type="radio" name="quiz-q3" id="q3-o2" value="crimson-bark">
+                <label for="q3-o2" class="quiz-option-label">
+                  <span class="quiz-option-title">Elegant & Moderate</span>
+                  <span class="quiz-option-desc">Leaves a warm, tasteful whisper as you pass.</span>
+                </label>
+              </div>
+              <div class="quiz-option">
+                <input type="radio" name="quiz-q3" id="q3-o3" value="spiced-oud">
+                <label for="q3-o3" class="quiz-option-label">
+                  <span class="quiz-option-title">Strong & Expressive</span>
+                  <span class="quiz-option-desc">Envelops you beautifully, prompting questions.</span>
+                </label>
+              </div>
+              <div class="quiz-option">
+                <input type="radio" name="quiz-q3" id="q3-o4" value="smoked-amber">
+                <label for="q3-o4" class="quiz-option-label">
+                  <span class="quiz-option-title">Eternal & Opulent</span>
+                  <span class="quiz-option-desc">Unmistakable presence, lingers in rooms long after.</span>
+                </label>
+              </div>
+            </div>
+            <div class="quiz-actions">
+              <button class="quiz-btn-prev" onclick="prevQuizStep()">Back</button>
+              <button class="btn btn-primary quiz-btn-next" onclick="nextQuizStep()">Next Step</button>
+            </div>
+          </div>
+
+          <!-- STEP 4: Primary Note -->
+          <div class="quiz-step" data-step="4">
+            <span class="quiz-question-num">Question 4 of 4</span>
+            <h3 class="quiz-question-text">Which sensory pairing with cinnamon appeals to you most?</h3>
+            <div class="quiz-options">
+              <div class="quiz-option">
+                <input type="radio" name="quiz-q4" id="q4-o1" value="spiced-oud" checked>
+                <label for="q4-o1" class="quiz-option-label">
+                  <span class="quiz-option-title">Wild Cardamom & Oud Wood</span>
+                  <span class="quiz-option-desc">Spicy, exotic, and noble woody facets.</span>
+                </label>
+              </div>
+              <div class="quiz-option">
+                <input type="radio" name="quiz-q4" id="q4-o2" value="vanilla-bark">
+                <label for="q4-o2" class="quiz-option-label">
+                  <span class="quiz-option-title">Bourbon Vanilla & White Musk</span>
+                  <span class="quiz-option-desc">Gourmand, sweet, comforting, skin-soft.</span>
+                </label>
+              </div>
+              <div class="quiz-option">
+                <input type="radio" name="quiz-q4" id="q4-o3" value="crimson-bark">
+                <label for="q4-o3" class="quiz-option-label">
+                  <span class="quiz-option-title">Damascus Rose & Pink Pepper</span>
+                  <span class="quiz-option-desc">Deep velvety florals, spicy-sweet romance.</span>
+                </label>
+              </div>
+              <div class="quiz-option">
+                <input type="radio" name="quiz-q4" id="q4-o4" value="smoked-amber">
+                <label for="q4-o4" class="quiz-option-label">
+                  <span class="quiz-option-title">Charred Cedar & Heavy Amber</span>
+                  <span class="quiz-option-desc">Smoky, resinous, dark, and highly hypnotic.</span>
+                </label>
+              </div>
+            </div>
+            <div class="quiz-actions">
+              <button class="quiz-btn-prev" onclick="prevQuizStep()">Back</button>
+              <button class="btn btn-primary" onclick="calculateQuizResult()">Discover Signature</button>
+            </div>
+          </div>
+
+          <!-- RESULT CONTAINER -->
+          <div class="quiz-step" id="quiz-result-step">
+            <div class="quiz-result-pane">
+              <span class="result-celebrate">Your Signature Scent Match</span>
+              
+              <div class="result-card glass-panel">
+                <div class="result-left-column">
+                  <div class="result-match-circle">
+                    <svg class="result-svg-ring" viewBox="0 0 160 160">
+                      <circle class="result-circle-bg-ring" cx="80" cy="80" r="70" />
+                      <circle class="result-circle-progress" id="result-progress-ring" cx="80" cy="80" r="70" />
+                    </svg>
+                    <div class="result-match-val" id="result-match-pct">95<span>%</span></div>
+                  </div>
+                  <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted);">Compatibility Match</span>
+                </div>
+                
+                <div class="result-product-info">
+                  <span class="product-subtitle" id="result-tagline">Woody & Warm Spice</span>
+                  <h4 class="result-product-title" id="result-title">No. 1 Spiced Oud</h4>
+                  <p class="result-product-desc" id="result-desc">
+                    An enigmatic, deep blend of rare organic oud wood and warm Ceylon cinnamon bark. Matches your bold, mysterious preferences.
+                  </p>
+                  
+                  <div class="result-actions">
+                    <button class="btn btn-primary" id="quiz-result-add-btn">Add to Collection</button>
+                    <button class="btn btn-secondary" onclick="restartQuiz()" style="padding: 0.75rem 1.5rem;">Retake Quiz</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Virtual Perfume Bottle Engraver Widget -->
+    <section class="engraving-section" id="engraving">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-subtitle">Personalization</span>
+          <h2 class="section-title">Virtual Bottle Engraver</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="engraving-grid">
+          <!-- Left: Real-time visual rendering -->
+          <div class="engraver-visual-wrap glass-panel fade-in">
+            <img src="assets/hero_perfume.png" alt="Engraving Perfume Bottle Preview" class="engraver-bottle-img" id="engraver-bottle-preview">
+            <!-- Precise absolute overlay typography on bottle glass body -->
+            <div class="engraving-overlay">
+              <div class="engraving-text-render" id="engraving-render-text">your name</div>
+            </div>
+          </div>
+
+          <!-- Right: Custom controls -->
+          <div class="engraver-form-wrap fade-in">
+            <h3 class="engraver-form-title">Artisanal Personalization</h3>
+            <p class="engraver-form-desc">
+              Make a bottle uniquely yours or craft the ultimate bespoke gift. Our master engravers will precision-engrave your selected text directly onto the thick glass body in a luxury gold finish.
+            </p>
+
+            <!-- Choose your bottle -->
+            <div class="engraver-input-group">
+              <span class="engraver-input-label">Select Fragrance Blend</span>
+              <div class="engraver-selection-grid">
+                <div class="engraver-bottle-select active" data-bottle-id="spiced-oud" data-bottle-img="assets/perfume_no1.png" data-bottle-name="No. 1 Spiced Oud">
+                  <img src="assets/perfume_no1.png" alt="No. 1 Spiced Oud mini">
+                  <span class="engraver-bottle-select-label">No. 1</span>
+                </div>
+                <div class="engraver-bottle-select" data-bottle-id="vanilla-bark" data-bottle-img="assets/perfume_blanc.png" data-bottle-name="Blanc Vanilla Bark">
+                  <img src="assets/perfume_blanc.png" alt="Blanc Vanilla Bark mini">
+                  <span class="engraver-bottle-select-label">Blanc</span>
+                </div>
+                <div class="engraver-bottle-select" data-bottle-id="crimson-bark" data-bottle-img="assets/perfume_rose.png" data-bottle-name="Rose Crimson Bark">
+                  <img src="assets/perfume_rose.png" alt="Rose Crimson Bark mini">
+                  <span class="engraver-bottle-select-label">Rose</span>
+                </div>
+                <div class="engraver-bottle-select" data-bottle-id="smoked-amber" data-bottle-img="assets/perfume_noir.png" data-bottle-name="Noir Smoked Amber">
+                  <img src="assets/perfume_noir.png" alt="Noir Smoked Amber mini">
+                  <span class="engraver-bottle-select-label">Noir</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Inscription form -->
+            <div class="engraver-input-group">
+              <label for="engraving-text-input" class="engraver-input-label">Your Custom Inscription (+ $15)</label>
+              <input type="text" id="engraving-text-input" class="engraver-input" placeholder="YOUR INITIALS / NAME" maxlength="15" autocomplete="off">
+              <span class="engraver-char-counter"><span id="engraver-char-count">0</span> / 15 Characters</span>
+            </div>
+
+            <button class="btn btn-primary" id="engraver-submit-btn" style="width:100%; margin-top:1rem;">
+              Engrave & Add to Collection
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scent Heritage / Craftsmanship Section -->
+    <section class="heritage" id="heritage">
+      <div class="container heritage-grid">
+        <div class="heritage-visuals slide-in-left">
+          <div class="heritage-circle-frame">
+            <img src="assets/hero_perfume.png" alt="Cinomon Artisanal Ingredients Cinnamon distillation" class="heritage-img">
+          </div>
+          <div class="heritage-floating-card glass-panel">
+            <h5 class="h-float-title">100% Organic Ceylon</h5>
+            <p class="h-float-desc">Ethically harvested from family-owned estates in Sri Lanka.</p>
+          </div>
+        </div>
+
+        <div class="heritage-content slide-in-right">
+          <span class="section-subtitle">Heritage</span>
+          <h2 class="section-title" style="margin-bottom: 2rem;">Slow Artisanal Craft</h2>
+          
+          <div class="heritage-steps">
+            <div class="heritage-step">
+              <div class="heritage-step-num">01</div>
+              <div class="heritage-step-content">
+                <h4>Ceylon Bark Sourcing</h4>
+                <p>We source only premium Ceylon cinnamon barks, harvested by hand at optimal spice density during the wet season to preserve vital essential oil complexity.</p>
+              </div>
+            </div>
+
+            <div class="heritage-step">
+              <div class="heritage-step-num">02</div>
+              <div class="heritage-step-content">
+                <h4>Cold-Press Distillation</h4>
+                <p>We utilize a slow, low-temperature steam distillation system over 48 hours to extract the spice's deep warm amber heart without burning delicate sweet notes.</p>
+              </div>
+            </div>
+
+            <div class="heritage-step">
+              <div class="heritage-step-num">03</div>
+              <div class="heritage-step-content">
+                <h4>Small Batch Maturation</h4>
+                <p>Each blend matures in dark glass cellars for exactly six months, letting organic wood, spice, and floral molecules molecularly fuse for absolute sillage depth.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials / Masonry Grid -->
+    <section class="reviews-section" id="reviews">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-subtitle">Testimonials</span>
+          <h2 class="section-title">Whispers of Cinomon</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="reviews-grid">
+          <!-- Card 1 -->
+          <div class="review-card glass-panel fade-in">
+            <div class="review-rating">★★★★★</div>
+            <p class="review-text">
+              "No. 1 Spiced Oud is absolute wizardry. The cinnamon note isn't harsh; it's a smooth, glowing warmth that blends flawlessly into the woody base. I get compliments on this constantly."
+            </p>
+            <span class="review-author">— Victoria K., Fragrance Curator</span>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="review-card glass-panel fade-in">
+            <div class="review-rating">★★★★★</div>
+            <p class="review-text">
+              "Blanc Vanilla Bark is a masterpiece of gourmand perfumery. It smells like a luxury winter night. The bottle engraving is incredibly sharp and makes for an incredible signature display."
+            </p>
+            <span class="review-author">— Julian M., Editorial Lead</span>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="review-card glass-panel fade-in">
+            <div class="review-rating">★★★★★</div>
+            <p class="review-text">
+              "Rose Crimson Bark represents romantic high-end styling at its very best. The rose is lush and velvety, while the fiery red cinnamon brings a bold spark that makes it extremely modern."
+            </p>
+            <span class="review-author">— Elena R., Perfume Sommelier</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Sliding Shopping Cart Overlay & Drawer -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <h3 class="cart-title">Your Collection</h3>
+      <button class="btn-icon" id="cart-close-btn" aria-label="Close shopping cart">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Items list or Empty Message -->
+    <div class="cart-items-container" id="cart-items-container">
+      <!-- Dynamically filled by app.js -->
+    </div>
+
+    <div class="cart-footer">
+      <div class="cart-summary-row">
+        <span>Distillation & Shipping</span>
+        <span style="color:var(--text-primary); font-weight: 500;">Complimentary</span>
+      </div>
+      <div class="cart-summary-row total">
+        <span>Grand Total</span>
+        <span id="cart-total-val">$0.00</span>
+      </div>
+      <div class="cart-shipping-info">
+        Free Express Shipping on All Orders.
+      </div>
+      <button class="btn btn-primary cart-checkout-btn" id="cart-checkout-btn">
+        Initiate Checkout
+      </button>
+    </div>
+  </aside>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-logo-col">
+          <a href="#" class="logo" style="margin-bottom:1rem;">cinomon<span class="logo-dot"></span></a>
+          <p>Reimagining natural Ceylon cinnamon in modern luxury perfumery. Small-batch distillation since 2026.</p>
+        </div>
+
+        <div>
+          <h5 class="footer-col-title">Fragrances</h5>
+          <ul class="footer-links">
+            <li><a href="#catalog" class="footer-link">No. 1 Spiced Oud</a></li>
+            <li><a href="#catalog" class="footer-link">Blanc Vanilla Bark</a></li>
+            <li><a href="#catalog" class="footer-link">Rose Crimson Bark</a></li>
+            <li><a href="#catalog" class="footer-link">Noir Smoked Amber</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h5 class="footer-col-title">House</h5>
+          <ul class="footer-links">
+            <li><a href="#heritage" class="footer-link">Distillation Craft</a></li>
+            <li><a href="#reviews" class="footer-link">Whispers (Reviews)</a></li>
+            <li><a href="#quiz" class="footer-link">Scent Finder Quiz</a></li>
+            <li><a href="#engraving" class="footer-link">Bespoke Engraving</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h5 class="footer-col-title">Whispers Newsletter</h5>
+          <p class="footer-newsletter-text">Subscribe to receive exclusive access to experimental batches, vault offerings, and scent releases.</p>
+          <form class="footer-form" id="newsletter-form" onsubmit="event.preventDefault(); submitNewsletter();">
+            <input type="email" class="footer-input" id="newsletter-email" placeholder="Your Email Address" required autocomplete="off">
+            <button type="submit" class="footer-submit">Join</button>
+          </form>
+          <span id="newsletter-feedback" style="font-size:0.75rem; color: var(--gold-glow); display:block; margin-top:0.5rem; transition: opacity 0.3s ease; opacity:0;"></span>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 cinomon. All rights reserved. Designed for elite scent-seekers.</p>
+        <div class="footer-socials">
+          <a href="#" class="footer-social-link" aria-label="Instagram">Instagram</a>
+          <a href="#" class="footer-social-link" aria-label="Pinterest">Pinterest</a>
+          <a href="#" class="footer-social-link" aria-label="Journal">Journal</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Web Interactions Script -->
+  <script src="app.js"></script>
+</body>
+</html>
